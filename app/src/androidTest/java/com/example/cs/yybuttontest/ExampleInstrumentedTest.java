@@ -3,6 +3,7 @@ package com.example.cs.yybuttontest;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.Espresso;
+import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Rule;
@@ -30,7 +31,7 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.cs.buttontest", appContext.getPackageName());
+        assertEquals("com.example.cs.yybuttontest", appContext.getPackageName());
     }
 
     @Test
