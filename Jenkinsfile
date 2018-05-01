@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'ubuntu && mobile'
+        label 'any'
     }
     environment {
         // Here's an example of global parameter
