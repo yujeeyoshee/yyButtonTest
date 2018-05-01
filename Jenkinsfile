@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'any'
-    }
+    agent any
     environment {
         // Here's an example of global parameter
         ANDROID_HOME = '/opt/android-tools/android-sdk'
