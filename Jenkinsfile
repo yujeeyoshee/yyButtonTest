@@ -8,6 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 //pwd
+                sh 'date'
                 sh './gradlew --refresh-dependencies clean assemble'
             }
             post {
