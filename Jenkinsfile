@@ -1,9 +1,9 @@
 pipeline {
     agent any
-//    environment {
-//        // Here's an example of global parameter
+    environment {
+        // Here's an example of global parameter
 //        ANDROID_HOME = '/opt/android-tools/android-sdk'
-//    }
+    }
     stages {
         stage('Build') {
             steps {
