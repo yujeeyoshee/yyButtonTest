@@ -1,14 +1,14 @@
 pipeline {
     agent any
-    environment {
-        // Here's an example of global parameter
-        ANDROID_HOME = '/Users/yyoshiie/Library/Android/sdk'
-    }
+//    environment {
+//        // Here's an example of global parameter
+//        ANDROID_HOME = '/Users/yyoshiie/Library/Android/sdk'
+//    }
     stages {
         stage('Build') {
             steps {
-                sh 'pwd'
-                sh './gradlew --refresh-dependencies clean assemble'
+//                sh 'pwd'
+                sh './gradlew --refresh-dependencies clean assembleDebug'
             }
             post {
                 success {
