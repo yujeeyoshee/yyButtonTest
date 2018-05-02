@@ -5,9 +5,9 @@ pipeline {
 //        ANDROID_HOME = '/Users/yyoshiie/Library/Android/sdk'
 //    }
     stages {
-        stage('Build') {
+        stage('Build App') {
             steps {
-                sh './gradlew --refresh-dependencies clean assembleDebug'
+                sh './gradlew --refresh-dependencies clean assembleDebug assembleAndroidTest'
             }
             post {
                 success {
