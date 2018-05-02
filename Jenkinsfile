@@ -19,6 +19,24 @@ pipeline {
                 }
             }
         }
+        stage('AWS device farm unit test') {
+            steps {
+                sh 'ls app/build/outputs/apk/'
+                step([$class: 'AWSDeviceFarmRecorder',
+                        projectName: 'SimpleButton',
+                        devicePoolName: 'test2-pool',
+                        runName: 'jenkins-functional-tests-${BUILD_ID}',
+                        appArtifact: 'app/build/outputs/apk/simpleButton-debug.apk',
+                        testToRun: 'INSTRUMENTATION',
+                        appiumJavaJUnitTest: '',
+                        junitArtifact: 'app/build/outputs/apk/yySimpleButton-debug-androidTest.apk',
+                        junitFilter: '', 
+                        ignoreRunError: false,
+                        isRunUnmetered: false,
+                        storeResults: true,
+                    ])
+            }
+        }
     }
     post {
         always {
