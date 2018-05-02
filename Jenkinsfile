@@ -24,7 +24,7 @@ pipeline {
     post {
         always {
             echo 'Delete files under workspace dir'
-            deleteDir()
+//            deleteDir()
         }
         success {
             echo 'All stages successful :)'
